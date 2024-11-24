@@ -172,6 +172,11 @@ const App: React.FC = () => {
       </div>
 
       <div className="w-full max-w-lg h-full shadow-lg rounded-lg overflow-hidden bg-white p-8 flex flex-col">
+      {error && (
+          <div className="bg-red-500 text-white p-4 rounded mb-4">
+            {error}
+          </div>
+        )}
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-sm font-medium mb-2">
