@@ -111,7 +111,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchConversion = async () => {
       try {
-        const response = await fetch("https://smart-currency-converter-production.up.railway.app//api/getConvert");
+        const response = await fetch("https://smart-currency-converter-production.up.railway.app/api/getConvert");
         const data = await response.json();
         console.log(data, "getConvert");
         setConversionHistory(data);
