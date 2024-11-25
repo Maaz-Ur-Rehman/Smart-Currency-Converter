@@ -87,7 +87,7 @@ const App: React.FC = () => {
     convertedAmount: number;
   }) => {
     try {
-      const response = await fetch("http://localhost:7000/api/saveConvert", {
+      const response = await fetch("https://smart-currency-converter-production.up.railway.app/api/saveConvert", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -111,7 +111,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchConversion = async () => {
       try {
-        const response = await fetch("http://localhost:7000/api/getConvert");
+        const response = await fetch("https://smart-currency-converter-production.up.railway.app//api/getConvert");
         const data = await response.json();
         console.log(data, "getConvert");
         setConversionHistory(data);
